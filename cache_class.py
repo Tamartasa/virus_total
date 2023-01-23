@@ -12,6 +12,13 @@ class Cache:
             with open(self.path, 'rb') as handle:
                 print('loading info from cache')
                 self.data = pickle.load(handle)
+        # copy for original_data
+        if not self.data:
+            self.original_data = {}
+        else:
+            with open(self.path, 'rb') as handle:
+                print('loading info from cache for original_data copy')
+                self.original_data = pickle.load(handle)
 
     def get_entry(self, url):
         return self.data.get(url, None)

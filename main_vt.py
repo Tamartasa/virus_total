@@ -35,6 +35,7 @@ def main():
             api_key = fh.read()
 
     manager = VtManager(args.urls, args.scan, api_key)
+
     print(manager.execute_all())
     manager.update_cache()
 

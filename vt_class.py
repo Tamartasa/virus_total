@@ -9,7 +9,7 @@ from cache_class import Cache
 class VtManager:
     def __init__(self, urls, is_force_scan, api_key):
         self.cache = Cache('C:\\Users\\tamar\Desktop\\full_stack_course\\virus_total', 'cache.pickle')
-        self.original_data = self.cache.data
+        self.original_data = self.cache.original_data
 
         self.is_force_scan = is_force_scan
         self.api_key = api_key
